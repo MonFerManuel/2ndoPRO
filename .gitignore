@@ -8,8 +8,15 @@
 
 # Node
 /node_modules
+node_modules/
+node_modules
 npm-debug.log
 yarn-error.log
+
+
+# Angular
+.angular
+.angular/
 
 # IDEs and editors
 .idea/
@@ -39,4 +46,6 @@ testem.log
 
 # System files
 .DS_Store
+
+
 Thumbs.db
