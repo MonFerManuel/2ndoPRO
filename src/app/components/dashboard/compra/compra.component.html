@@ -1,0 +1,79 @@
+<div style="justify-content: center; align-items: center;display: flex;">
+
+<mat-list >
+    <mat-list-item>
+        <span style="text-align: center;font-weight: 800;display: flex;justify-content: center;" matListItemTitle>Compra</span>
+        
+      </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>Lil durk type Beat</span>
+      <span matListItemLine>9.99$</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>Lil baby type Beat</span>
+      <span matListItemLine>9.99$</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>C.mirazo type Beat</span>
+      <span matListItemLine>14.99$</span>
+    </mat-list-item>
+    <mat-list-item>
+        <span matListItemTitle>Total: 34.87$ </span>
+         
+      </mat-list-item>
+
+     
+      <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Nombre Completo</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field appearance="fill">
+              <mat-label>Correo Electrónico</mat-label>
+              <input matInput formControlName="secondCtrl" placeholder="ex: info@hdcm.es"
+                     required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="thirdFormGroup">
+          <form [formGroup]="thirdFormGroup">
+            <ng-template matStepLabel>Paypal</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="paypal" formControlName="firstCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+             
+            </div>
+          </form>
+        </mat-step>    
+        
+        <mat-step>
+          <ng-template matStepLabel>Listo</ng-template>
+          <p>Pulsa la flecha para efectuar la compra</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+            <button matIconButton routerLink="/dashboard/beatstore" ><mat-icon>arrow_right_alt</mat-icon></button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    
+  </mat-list>
+</div>

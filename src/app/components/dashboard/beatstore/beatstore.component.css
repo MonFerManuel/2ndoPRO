@@ -1,0 +1,35 @@
+.inicio{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.letra{
+    color: aliceblue;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.beats{
+    font-family: 'Courier New', Courier, fantasy;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+   
+    
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+}
+
+.containerLabel{
+
+    margin-right: 50%;
+    margin-top: 10%;
+    background-color: yellow;
+    
+}
+#footer{
+
+    display:none;
+}
+

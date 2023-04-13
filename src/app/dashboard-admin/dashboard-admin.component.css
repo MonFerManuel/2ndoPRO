@@ -1,0 +1,15 @@
+.contenedor{
+    margin-top: 20px;
+    margin-left: 50px;
+    border-style:groove;
+    border-top-width: thick;
+    border-right-width: thick;
+    border-bottom-width: thick;
+    border-left-width: thick;
+    border-top-color: whitesmoke;
+    border-right-color: whitesmoke;
+    border-bottom-color: whitesmoke;
+    border-left-color: whitesmoke;
+    width: 250px;
+    background-color: whitesmoke;
+}

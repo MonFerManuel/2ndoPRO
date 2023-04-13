@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Home",
+        "redirec": "/dashboard"
+    },
+
+    {
+        "nombre": "Beatstore",
+        "redirec": "/dashboard/beatstore"
+    },
+
+    {
+        "nombre": "Contacto",
+        "redirec": "/dashboard/contacto"
+    },
+  
+    {
+        "nombre": "Login",
+        "redirec": "/dashboard/login"
+    }
+    
+    
+]

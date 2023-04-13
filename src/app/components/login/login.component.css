@@ -1,0 +1,58 @@
+.body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    
+    background-image: url(../../../assets/img/IMG-6133.jpg);
+    
+}
+
+.login{
+   width: 100%;
+   max-width: 330px;
+   text-align: center;
+   margin-top: 200px;
+   
+}
+.titulo{
+    color: whitesmoke;
+    font-family: fantasy;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.spinner{
+    margin: 0 auto;
+}
+
+.bg-1{
+    
+     height: 50px;
+       
+    
+     
+    }
+    
+    
+    .t-stroke {
+    
+      color: transparent;
+    
+      -moz-text-stroke-width: 2px;
+    
+      -webkit-text-stroke-width: 2px;
+    
+      -moz-text-stroke-color: #000000;
+    
+      -webkit-text-stroke-color: #ffffff;
+      justify-content: center;
+    
+    }
+    
+     
+    
+    .t-shadow {
+    
+      text-shadow: 7px 7px #8dffcd;
+      justify-content: center;
+    }
+    

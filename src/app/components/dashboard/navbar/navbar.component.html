@@ -1,0 +1,76 @@
+
+    <mat-toolbar class="toolbar" color="primary" >
+
+      
+           <button class="button" routerLink="/dashboard" style="height: 90%; width: 5%; ">
+            <img src="../../../../assets/img/fotor_2023-2-26_12_25_48.png" style="height: 100%; width: 100%;">
+          </button>
+            
+          
+        
+        <span class="spacer"></span>
+        
+          
+       
+
+        <button class="color" mat-button *ngFor="let item of menu" [routerLink] = "item.redirec">{{item.nombre}}</button>
+        
+        <span class="spacer"></span>
+
+        
+        <div style="display:flex;flex-direction: column;z-index: 99;">
+        <button class="color" id="bttnUser" mat-icon-button><mat-icon>account_box</mat-icon></button>
+        <div id="divUser" style="background-image: url(../../../../assets/img/fondoCarrito.jpg);display: none;align-items: center;height: 400px;width: 300ox;z-index: 99;background-color: aliceblue;flex-direction: column;margin-top: 280px;">
+          <button class="color" id="bttnCerrarCuenta" style="position:absolute;margin-left: 220px;color: black;" mat-icon-button><mat-icon>highlight_off</mat-icon></button>
+         <br>
+         <img src="../../../../assets/img/miCuenta.png" style="width: 200px;height: 50px;" alt="">
+         <p style="font-size: smaller;color: black;">╚════════•°♥°•════════╝</p>
+         <mat-list style="display: flex;flex-direction: column;">
+          <mat-list-item>
+            <button>Administrar Cuenta</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button>Compras</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button>Me gusta</button>
+          </mat-list-item>
+
+         </mat-list> 
+
+        </div>
+        </div>
+
+        
+
+          <div style="display:flex;flex-direction: column;z-index: 99;">
+          <button class="color" id="bttnCompra" mat-icon-button><mat-icon matBadge="3" matBadgeColor="primary">add_shopping_cart</mat-icon></button>
+
+          <div id="divCompra" style="background-image: url(../../../../assets/img/fondoCarrito.jpg);height: 400px;align-items: center;width: 300px;background-color: aliceblue;display:none;margin-top: 300px;z-index: 99;flex-direction: column;">
+
+                    
+            <button class="color" id="bttnCerrar" style="position:absolute;margin-left: 250px;color: black;" mat-icon-button><mat-icon>highlight_off</mat-icon></button>
+              <br>
+              
+              <img src="../../../../assets/img/carrito.png" style="width: 200px;height: 50px;" alt="">
+              <p style="font-size: smaller;color: black;">╚════════•°♥°•════════╝</p>
+               
+               <p style="color: black;font-size: small;margin-left: 10px;">Luna Travis scott Type beat       Precio: 10$</p>
+               <p style="color: black;font-size: small;margin-left: 10px;">Callin Drake Type beat            Precio: 10$</p>
+               <p style="color: black;font-size: small;margin-left: 10px;">Night Lil bby Type beat           Precio: 10$</p>
+                <p style="color: black;font-size: small;margin-left: 10px;">                                 Total: 30$            </p>
+                <button style="color: black;" routerLink="/dashboard/compra">Pagar Todo</button>
+        
+        </div>
+      </div>
+          
+          
+          
+          
+    </mat-toolbar>
+    
+
+    
+
+
+    

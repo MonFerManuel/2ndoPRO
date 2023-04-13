@@ -1,0 +1,104 @@
+
+<div style="background-image: url(../../../../assets/img/IMG-6133.jpg);">
+    
+<div class="container" >
+    <mat-toolbar style="background-color: rgb(0, 0, 0);align-items: center;justify-content:left ;;">
+    
+        <span style="color: yellow;" class="letra">𝓑𝓔𝓐𝓣𝓢𝓣𝓞𝓡𝓔</span>
+       
+    
+    </mat-toolbar >
+    <mat-tab-group >
+
+        <mat-tab label="Busqueda" > 
+              <div style="background-image: url(../../../../assets/img/IMG-6133.jpg);height: 84vh;display: flex;flex-direction: row;">
+                <div style="width: 500px;height: 300px;background-image: url(../../../../assets/img/IMG-6133.jpg); margin-left: 150px;">
+                <mat-form-field  mat-mdc-form-field-subscript-wrapper style="margin-top: 100px;"  >
+                  <mat-label style="background-color: rgba(255, 255, 0, 0.103);">Filtrar Beats</mat-label>
+                  <input  matInput (keyup)="applyFilter($event)" placeholder="Ex. DRAKE typeBeat" #input autocomplete="off">
+                </mat-form-field>
+
+                <table style="width: 150px;margin-top: 80px;" mat-table [dataSource]="dataSource"  matSort>
+
+                    <ng-container matColumnDef="nombre">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+                      <td mat-cell *matCellDef="let element"> {{element.nombreBeat}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="bpm">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> BPM </th>
+                      <td mat-cell *matCellDef="let element"> {{element.bpm}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="typeBeat">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> TypeBeat </th>
+                      <td mat-cell *matCellDef="let element"> {{element.typeBeat}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="mood">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> Mood </th>
+                      <td mat-cell *matCellDef="let element"> {{element.mood}} </td>
+                    </ng-container>
+                    
+                    <ng-container matColumnDef="escala">
+                      <th mat-header-cell *matHeaderCellDef mat-sort-header> Escala </th>
+                      <td mat-cell *matCellDef="let element">{{element.escala}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+
+                  <mat-paginator style="width: 500px;" [pageSizeOptions]="[5, 10, 20]"
+                    showFirstLastButtons
+                    aria-label="Select page of Beats">
+                  </mat-paginator>
+                </div>
+                <iframe style="margin-top: 260px;margin-left: 300px;" width="500" height="400" src="https://www.youtube.com/embed/videoseries?list=PLg9vsWxxmGTK_Ca_goAAKpAB3-9Ztp2hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+
+
+
+          
+        </mat-tab>
+     
+        <mat-tab  label="Beats"> 
+          <div id="gridList" style="height: 500px;width: 600px;background-image: url(../../../../assets/img/IMG-6133.jpg);">
+          
+          
+          </div>
+       
+        </mat-tab>
+      
+      </mat-tab-group>
+
+      
+
+</div>
+</div>
+
+
+
+<script>
+
+this._beatService.getBeats().subscribe(data=> {
+    
+       
+    data.forEach((instru)=>{
+  
+          console.log("funciona")
+          waituntil();
+          document.getElementById('gridList').innerHTML = `
+          
+          <iframe src=${instru.url} style="height: 200pc;width:200px;"> </iframe>
+          `;
+      
+    
+        })
+   
+      })
+      
+    
+
+</script>
+

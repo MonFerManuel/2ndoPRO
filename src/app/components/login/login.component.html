@@ -1,0 +1,44 @@
+
+<div style="height: 5px;background-color: white;"></div>
+<mat-toolbar style="background-color: black;">
+            
+  <span style="color:yellow;" class="letra">𝓘𝓝𝓘𝓒𝓘𝓐𝓡 𝓢𝓔𝓢𝓘Ó𝓝</span>
+
+</mat-toolbar>
+
+<body style="background-image: url(IMG-6133);">
+
+  
+    
+
+<div class="body">
+  
+  <div class="login">
+      <mat-spinner *ngIf="loading" diameter="50" class="spinner" ></mat-spinner> 
+
+      <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="entrar()">
+        <img src="../../../assets/img/fotor_2023-2-26_12_25_48.png" width="40%">
+        <div class="bg-1">
+    
+          <h1 class="t-stroke t-shadow">LOGIN</h1>
+       
+       </div>
+    
+        
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Usuario</mat-label>
+            <input matInput autocomplete="off" formControlName="usuario">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput autocomplete="off" formControlName="password">
+          </mat-form-field>
+          <br>
+          <button  style="width: 30%;" type="submit"  mat-raised-button color="primary">Entrar</button>
+          
+      </form>
+      <button routerLink="/dashboard/registro" style="width: 30%;margin-top: 4%;" mat-raised-button color="primary">Registrarse</button>
+    </div>
+</div>
+</body>
