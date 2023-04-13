@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Visual Studio Code
+.vscode
+.vscode/
+
 # Compiled output
 /dist
 /tmp
@@ -12,7 +16,9 @@ node_modules/
 node_modules
 npm-debug.log
 yarn-error.log
-
+# Visual Studio Code
+.vscode
+.vscode/
 
 # Angular
 .angular
