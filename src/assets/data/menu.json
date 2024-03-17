@@ -1,23 +1,48 @@
 [
     {
-        "nombre": "Home",
+        "nombre": "Lar",
         "redirec": "/dashboard"
     },
 
     {
-        "nombre": "Beatstore",
+        "nombre": "Audio",
         "redirec": "/dashboard/beatstore"
     },
+
+    {
+        "nombre": "Vídeo",
+        "redirec": "/dashboard/login"
+    },
+    
+
+    {
+        "nombre": "Axencia",
+        "redirec": "/dashboard/contacto"
+    },
+
+    {
+        "nombre": "Discográfica",
+        "redirec": "/dashboard/beatstore"
+    },
+
+    {
+        "nombre": "Nós",
+        "redirec": "/dashboard/contacto"
+    },
+
+    {
+        "nombre": "Obra Social Corp.",
+        "redirec": "/dashboard/login"
+    },
+    
 
     {
         "nombre": "Contacto",
         "redirec": "/dashboard/contacto"
     },
-  
     {
         "nombre": "Login",
         "redirec": "/dashboard/login"
     }
-    
     
 ]

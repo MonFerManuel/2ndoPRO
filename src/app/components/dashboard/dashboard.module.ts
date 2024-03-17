@@ -14,6 +14,7 @@ import { DashboardAdminComponent } from 'src/app/dashboard-admin/dashboard-admin
 import { LoginComponent } from '../login/login.component';
 
 
+//declaramos los componentes
 
 @NgModule({
   declarations: [
@@ -35,4 +36,6 @@ import { LoginComponent } from '../login/login.component';
    
   ]
 })
+
+//exportamos el modulo del dashboard
 export class DashboardModule { }

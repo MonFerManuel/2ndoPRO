@@ -5,28 +5,25 @@
         <span style="text-align: center;font-weight: 800;display: flex;justify-content: center;" matListItemTitle>Compra</span>
         
       </mat-list-item>
-    <mat-list-item>
-      <span matListItemTitle>Lil durk type Beat</span>
-      <span matListItemLine>9.99$</span>
-    </mat-list-item>
-    <mat-list-item>
-      <span matListItemTitle>Lil baby type Beat</span>
-      <span matListItemLine>9.99$</span>
-    </mat-list-item>
-    <mat-list-item>
-      <span matListItemTitle>C.mirazo type Beat</span>
-      <span matListItemLine>14.99$</span>
-    </mat-list-item>
-    <mat-list-item>
-        <span matListItemTitle>Total: 34.87$ </span>
-         
-      </mat-list-item>
+    <div style="height: 200px;height: 200px;display: flex;align-items: center;justify-content: center;flex-direction: column;" id="divCompra2">
+      <br>
+      <br>
+      <br>
+      <p></p>
+      <p style="color: black;font-size: medium;margin-top: 100px;" id="atakF"></p>
+      <p style="color: black;font-size: medium;;margin-top: 50px;" id="srF"></p>
+      <p style="color: black;font-size: medium;margin-top: 50px;" id="bigF"></p>
+      <p style="color: black;font-size: medium;margin-top: 50px;" id="roomF"></p>
+      <p style="color: black;font-size: medium;margin-top: 50px;" id="darkSF"></p>
+      <p style="color: black;font-size: medium;margin-top: 50px;" id="callingF"></p>
+
+    </div>
 
      
-      <mat-stepper [linear]="isLinear" #stepper>
+      <mat-stepper style="margin-top: 300px;width: 400px;" [linear]="isLinear" #stepper>
         <mat-step [stepControl]="firstFormGroup">
           <form [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Nombre Completo</ng-template>
+            <ng-template matStepLabel>Name</ng-template>
             <mat-form-field appearance="fill">
               <mat-label>Name</mat-label>
               <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
@@ -36,10 +33,10 @@
             </div>
           </form>
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+        <mat-step [stepControl]="secondFormGroup" label="address">
           <form [formGroup]="secondFormGroup">
             <mat-form-field appearance="fill">
-              <mat-label>Correo Electrónico</mat-label>
+              <mat-label>mail</mat-label>
               <input matInput formControlName="secondCtrl" placeholder="ex: info@hdcm.es"
                      required>
             </mat-form-field>
@@ -70,7 +67,7 @@
           <div>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button (click)="stepper.reset()">Reset</button>
-            <button matIconButton routerLink="/dashboard/beatstore" ><mat-icon>arrow_right_alt</mat-icon></button>
+            <button id="procesoPago"  matIconButton routerLink="/dashboard/beatstore" ><mat-icon>arrow_right_alt</mat-icon></button>
           </div>
         </mat-step>
       </mat-stepper>

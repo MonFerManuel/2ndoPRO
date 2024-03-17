@@ -1,23 +1,24 @@
 
-<div style="height: 5px;background-color: white;"></div>
-<mat-toolbar style="background-color: black;">
+<div style="height: 5px;background-color: #ffcc3d;"></div>
+<div style="background-color: black;height: 100%;">
+<mat-toolbar style="background-color: black;display: flex;flex-direction: column;align-items: center;justify-content: center;">
             
-  <span style="color:yellow;" class="letra">𝓘𝓝𝓘𝓒𝓘𝓐𝓡 𝓢𝓔𝓢𝓘Ó𝓝</span>
-
+  
+  <img style="height: 200px;width: 400px;margin-top: 350px;" src="../../../assets/img/AALDEA LOGOTIPO FINAL-04.png" width="40%">
 </mat-toolbar>
 
-<body style="background-image: url(IMG-6133);">
+
 
   
     
 
-<div class="body">
+<div class="body" style="margin-top: 200px;">
   
-  <div class="login">
+  <div class="login" >
       <mat-spinner *ngIf="loading" diameter="50" class="spinner" ></mat-spinner> 
 
-      <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="entrar()">
-        <img src="../../../assets/img/fotor_2023-2-26_12_25_48.png" width="40%">
+      <form style="display: flex;flex-direction: column;align-items: center;justify-content: center;" *ngIf="!loading" [formGroup]="form" (ngSubmit)="entrar()">
+        
         <div class="bg-1">
     
           <h1 class="t-stroke t-shadow">LOGIN</h1>
@@ -26,19 +27,21 @@
     
         
         <br>
-        <mat-form-field appearance="fill">
+        <mat-form-field style="width: 300px;" appearance="fill">
             <mat-label>Usuario</mat-label>
             <input matInput autocomplete="off" formControlName="usuario">
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field style="width: 300px;"  appearance="fill">
             <mat-label>Password</mat-label>
             <input type="password" matInput autocomplete="off" formControlName="password">
           </mat-form-field>
           <br>
-          <button  style="width: 30%;" type="submit"  mat-raised-button color="primary">Entrar</button>
-          
+          <button  style="width: 60%; height: 60px;" type="submit"  mat-raised-button color="primary">Entrar</button>
+          <br>
+          <br>
+          <button style="width: 60%; height: 60px;" routerLink="/dashboard/registro" style="width: 60%;height: 60px;" mat-raised-button color="primary">Registrarse</button>
       </form>
-      <button routerLink="/dashboard/registro" style="width: 30%;margin-top: 4%;" mat-raised-button color="primary">Registrarse</button>
+      
     </div>
 </div>
-</body>
+</div>

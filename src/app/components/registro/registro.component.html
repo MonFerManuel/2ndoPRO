@@ -1,31 +1,58 @@
-<h1 style="margin-left: 34%;margin-top: 5%;">𝓕𝓞𝓡𝓜𝓤𝓛𝓐𝓡𝓘𝓞 𝓓𝓔 𝓡𝓔𝓖𝓘𝓢𝓣𝓡𝓞 𝓗𝓓𝓒𝓜</h1>
-<div style="justify-content: center;align-items: center;margin-left: 40%;margin-top: 5%;">
-<mat-form-field appearance="fill">
+<div style="height: 5px;background-color: white;"></div>
+<div style="background-color: black;display: flex;justify-content: center;align-items: center;flex-direction: column;height: 100%;">
+ 
+
+
+<div style="justify-content: center;align-items: center;display: flex;flex-direction: column;margin-left: 1100px;">
+<form  [formGroup]="formUsuario" (ngSubmit)="postUsuario()" >
+  <img style="margin-right: 10px;" src="../../../assets/img/AALDEA LOGOTIPO FINAL-04.png" alt="" width="20%">
+  <br>
+  
+<mat-form-field style="margin-left: 33px;" appearance="fill">
     <mat-label>Nombre</mat-label>
-    <input matInput>
+    <input matInput autocomplete="off" formControlName="nombre">
   </mat-form-field>
   <br>
-  <mat-form-field appearance="fill">
+  <mat-form-field style="margin-left: 33px;" appearance="fill">
     <mat-label>Primer Apellido</mat-label>
-    <input matInput>
+    <input matInput autocomplete="off" formControlName="primerApellido">
   </mat-form-field>
   <br>
-  <mat-form-field appearance="fill">
+  <mat-form-field style="margin-left: 33px;" appearance="fill">
     <mat-label>Segundo Apellido</mat-label>
-    <input matInput>
+    <input matInput autocomplete="off" formControlName="segundoApellido">
+  </mat-form-field >
+  <br>
+  <mat-form-field style="margin-left: 33px;" appearance="fill">
+    <mat-label>Ciudad</mat-label>
+    <input matInput autocomplete="off" formControlName="ciudad">
   </mat-form-field>
   <br>
-  <mat-form-field appearance="fill">
+  <mat-form-field style="margin-left: 33px;" appearance="fill">
     <mat-label>Email</mat-label>
-    <input matInput>
+    <input matInput autocomplete="off" formControlName="email">
+  </mat-form-field>
+  <br><mat-form-field style="margin-left: 33px;" appearance="fill">
+    <mat-label>Nombre de Usuario</mat-label>
+    <input matInput autocomplete="off" formControlName="nombreUsuario">
   </mat-form-field>
   <br>
-  <mat-form-field appearance="fill">
+  <mat-form-field style="margin-left: 33px;" appearance="fill">
     <mat-label>Password</mat-label>
-    <input matInput>
+    <input matInput autocomplete="off" formControlName="password">
   </mat-form-field>
   <br>
-  <div style="padding-left: 4%;">
-  <button style="width: 15%;" type="submit"  mat-raised-button color="primary">Registrarme</button>
+  <div >
+  <button style="width: 200px; height: 60px;margin-left: 37px;"  type="submit"   mat-raised-button color="primary">Registrarme</button>
     </div>  
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 </div>

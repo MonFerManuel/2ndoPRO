@@ -23,7 +23,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 
-
+//imports y exports de los modulos para que los elementos de material sean utilizados
 
 
 @NgModule({

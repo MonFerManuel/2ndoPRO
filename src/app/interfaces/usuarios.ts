@@ -1,11 +1,13 @@
+//interfaz modelo para usuarios
 export interface Usuarios{
-    usuId?: string,
-    nombre: string,
-    primerApellido: number,
-    segundoApellido: string,
-    password:string,
-    nombreUsu: string,
-    Dni: string,
-    email: string
+    
+    nombreUsuario: string,
+    ciudad: String,
+    email: string,
+    nombre:string,
+    password: string,
+    primerApellido: string,
+    rol: string,
+    segundoApellido: String
     
 }

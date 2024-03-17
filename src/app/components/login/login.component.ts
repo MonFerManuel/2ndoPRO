@@ -13,14 +13,15 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
 
+export class LoginComponent implements OnInit {
+  //variables
   form: FormGroup;
   loading = false;
   nombreUsuario: string;
 
   
-  
+  //importamos en el constructor un router y el constructor del formulario y el snackbar
 
   constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router,
      private _usuariosService: UsuariosService, private aRoute: ActivatedRoute){
@@ -37,19 +38,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void{
    this.entrar();
   }
- /* entrar(){
-    const usuario= this.form.value.usuario;
-    const password= this.form.value.password;
-    if(usuario == 'hdcm' && password =='123'){
-              // accedemos a dashboard
-              this.fakeloading();
 
-    }else{
-              this.error();
-
-    }
-  }
-**/
+  //si el login es un correcto se lo mostramos al usuario con un snackbar
   error(){
     this._snackBar.open('Usuario o Contraseña INCORRECTOS', "Cerrar", {
       duration: 5000,
@@ -57,12 +47,16 @@ export class LoginComponent implements OnInit {
       verticalPosition: 'bottom'
     })
   }
+
+  //metodo para redirigir al admin
   loadingAdmin(){
     this.loading= true;
     setTimeout(() => {
       this.router.navigate(['/dashboard/dashboardAdmin'])
     }, 2000);
   }
+
+  //metodo para redirigir al usuario
   loadingUser(){
     this.loading= true;
     setTimeout(() => {
@@ -70,16 +64,17 @@ export class LoginComponent implements OnInit {
     }, 2000);
   }
 
+  //metodo para el acceso a través del servicio para comparar contraseñas. Después según rol se redirige a un sitio o a otro.
   entrar(){
     const usuario= this.form.value.usuario;
     const passwordBBDD= this.form.value.password;
-    const rolAmind = "admin"
+    const rolAdmin = "admin"
     const roluser= "user"
     this._usuariosService.getUsuario(usuario).subscribe(data=>{
 
       
 
-      if (passwordBBDD == data.password && data.rol == rolAmind){
+      if (passwordBBDD == data.password && data.rol == rolAdmin){
 
        
           this.loadingAdmin()

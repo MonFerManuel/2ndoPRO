@@ -1,26 +1,27 @@
 
-    <mat-toolbar class="toolbar" color="primary" >
+    <mat-toolbar class="toolbar" color="primary" style="display: flex;flex-direction: row;align-items: center;justify-content: center; height: 120px;margin-right: 100px;" >
 
       
-           <button class="button" routerLink="/dashboard" style="height: 90%; width: 5%; ">
-            <img src="../../../../assets/img/fotor_2023-2-26_12_25_48.png" style="height: 100%; width: 100%;">
+           <button class="button" routerLink="/dashboard" style="height: 200px; width: 400px;margin-left: 0%;border-color: black;opacity: 100;margin-left: 0px;border: none;">
+            <img src="../../../../assets/img/AALDEA LOGOTIPO FINAL-04.png" style="height: 100%; width: 100%;">
           </button>
             
           
         
-        <span class="spacer"></span>
+        <div style="margin-right: 260px;"></div>
         
           
        
 
-        <button class="color" mat-button *ngFor="let item of menu" [routerLink] = "item.redirec">{{item.nombre}}</button>
+
+  <button style="color: #ffcc3d; margin-left: 50px;font-size: 15px;font-weight: bold;" mat-button *ngFor="let item of menu" [routerLink] = "item.redirec">{{item.nombre}}</button>
         
         <span class="spacer"></span>
 
         
         <div style="display:flex;flex-direction: column;z-index: 99;">
         <button class="color" id="bttnUser" mat-icon-button><mat-icon>account_box</mat-icon></button>
-        <div id="divUser" style="background-image: url(../../../../assets/img/fondoCarrito.jpg);display: none;align-items: center;height: 400px;width: 300ox;z-index: 99;background-color: aliceblue;flex-direction: column;margin-top: 280px;">
+        <div id="divUser" style="background-image: url(../../../../assets/img/fondoCarrito.jpg);display: none;align-items: center;height: auto;width: auto;z-index: 99;background-color: aliceblue;flex-direction: column;margin-top: 200px;margin-right: 200px;">
           <button class="color" id="bttnCerrarCuenta" style="position:absolute;margin-left: 220px;color: black;" mat-icon-button><mat-icon>highlight_off</mat-icon></button>
          <br>
          <img src="../../../../assets/img/miCuenta.png" style="width: 200px;height: 50px;" alt="">
@@ -43,24 +44,32 @@
 
         
 
-          <div style="display:flex;flex-direction: column;z-index: 99;">
-          <button class="color" id="bttnCompra" mat-icon-button><mat-icon matBadge="3" matBadgeColor="primary">add_shopping_cart</mat-icon></button>
+          <div style="display:flex;flex-direction: column;">
+          <button  class="color" id="bttnCompra" mat-icon-button><mat-icon id="bttnBadge" [matBadge]="0" matBadgeColor="primary">add_shopping_cart</mat-icon></button>
 
-          <div id="divCompra" style="background-image: url(../../../../assets/img/fondoCarrito.jpg);height: 400px;align-items: center;width: 300px;background-color: aliceblue;display:none;margin-top: 300px;z-index: 99;flex-direction: column;">
+          <div id="divCompra" style="background-image: url(../../../../assets/img/fondoCarrito.jpg);height: auto;align-items: center;width: auto;background-color: aliceblue;display:none;margin-top: 300px;z-index: 99;flex-direction: column;width: auto;margin-right: 300px;">
 
                     
-            <button class="color" id="bttnCerrar" style="position:absolute;margin-left: 250px;color: black;" mat-icon-button><mat-icon>highlight_off</mat-icon></button>
+            <button class="color" id="bttnCerrar" style="position:absolute;margin-left: 230px;color: black;" mat-icon-button><mat-icon>highlight_off</mat-icon></button>
               <br>
               
               <img src="../../../../assets/img/carrito.png" style="width: 200px;height: 50px;" alt="">
               <p style="font-size: smaller;color: black;">╚════════•°♥°•════════╝</p>
+              <div id="divBeats">
+                <p id="atakS" style="color: black;font-size: small;margin-left: 10px;"></p>
+                <p id="srS" style="color: black;font-size: small;margin-left: 10px;"></p>
+                <p id="bigS" style="color: black;font-size: small;margin-left: 10px;"></p>
+                <p id="roomS" style="color: black;font-size: small;margin-left: 10px;"></p>
+                <p id="darksS" style="color: black;font-size: small;margin-left: 10px;"></p>
+                <p id="callingS" style="color: black;font-size: small;margin-left: 10px;"></p>
                
-               <p style="color: black;font-size: small;margin-left: 10px;">Luna Travis scott Type beat       Precio: 10$</p>
-               <p style="color: black;font-size: small;margin-left: 10px;">Callin Drake Type beat            Precio: 10$</p>
-               <p style="color: black;font-size: small;margin-left: 10px;">Night Lil bby Type beat           Precio: 10$</p>
-                <p style="color: black;font-size: small;margin-left: 10px;">                                 Total: 30$            </p>
-                <button style="color: black;" routerLink="/dashboard/compra">Pagar Todo</button>
-        
+               
+                         
+              </div>
+                <button id="pagarBut" style="color: black;" routerLink="/dashboard/compra">Pagar Todo</button>
+                <button id="vaciarBut" (click)="vaciarCarrito()" style="color: black;background-color: red;margin-top: 30px;" >Vaciar carrito</button>
+              <br>
+              <br>
         </div>
       </div>
           

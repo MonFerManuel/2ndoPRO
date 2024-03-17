@@ -4,6 +4,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 
+//Establecemos el sistema de rutas para el Front
+
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full'}, 
   { path: 'login', component: LoginComponent },

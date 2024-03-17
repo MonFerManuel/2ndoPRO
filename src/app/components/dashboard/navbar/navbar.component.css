@@ -1,13 +1,16 @@
 .spacer {
     flex: 1 1 auto;
+    background-color: #ffcc3d;
   }
 .toolbar{
-  background-image: url(../../../../assets/img/IMG-6133.jpg);
+  background-color: black;
 }
 .button{
   background-color: rgba(240, 248, 255, 0);
+  cursor: pointer;
+  border-color: black;
   
 }
 .color{
-  color: yellow;
+  color: #ffcc3d
 }

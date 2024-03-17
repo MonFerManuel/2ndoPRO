@@ -2,16 +2,15 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    
-    background-image: url(../../../assets/img/IMG-6133.jpg);
+    background-color: black;
     
 }
 
 .login{
-   width: 100%;
+   width: 800px;
    max-width: 330px;
    text-align: center;
-   margin-top: 200px;
+   margin-top: 50px;
    
 }
 .titulo{

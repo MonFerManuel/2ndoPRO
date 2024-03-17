@@ -1,3 +1,5 @@
+
+//interfaz modelo para beats
 export interface Beats{
     nombreBeat: string,
     bpm: number,

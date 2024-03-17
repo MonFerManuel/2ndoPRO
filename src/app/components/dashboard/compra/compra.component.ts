@@ -1,3 +1,4 @@
+import { DOCUMENT } from '@angular/common';
 import { Component } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 
@@ -7,6 +8,21 @@ import {FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./compra.component.css']
 })
 export class CompraComponent {
+  //metodo para procesar el pago y redirigir
+  procesoPago(){
+  let btnPago = document.getElementById('btnPago');
+  let divPago = document.getElementById('divBeats');
+
+    btnPago!.addEventListener('click',pagar);
+
+      function pagar(){
+        setInterval("location.reload()",1000);
+        //divPago!.innerHTML='<p></P>';
+        
+      }
+    
+}
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });

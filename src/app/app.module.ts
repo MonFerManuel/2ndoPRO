@@ -10,16 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 // COMPONENTES
-import { LoginComponent } from './components/login/login.component';
+
 import { SharedModule } from './components/shared/shared.module';
-import { RegistroComponent } from './components/registro/registro.component';
-import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
-import { DashboardUserComponent } from './dadhboard/dashboard-user/dashboard-user.component';
+
+//importamos módulos --> importante - SharedModeule lo creé yo para compartir más modulos y que esta sección quedara más limpia
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardUserComponent,
+    
    
     
     

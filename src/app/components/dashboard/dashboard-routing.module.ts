@@ -9,6 +9,7 @@ import { RegistroComponent } from '../registro/registro.component';
 import { LoginComponent } from '../login/login.component';
 import { DashboardAdminComponent } from 'src/app/dashboard-admin/dashboard-admin.component';
 
+//sistema de rutas hija para el lazy loading
 const routes: Routes = [
   { path: '', component: DashboardComponent, children: [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   
 ];
 
+//exportamos las rutas hijas para que el app routing se vincule
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
